@@ -17,7 +17,7 @@ var bio = {
     welcomeMessage : "Welcome to my Resume",
     skills : ["awesomeness","delivering things","cryogenic sleep","saving the universe"],
     bioPic : "images/fry.jpg"
-}
+};
 
 
 var formattedRole = HTMLheaderRole.replace("%data%",bio.role);
@@ -49,6 +49,38 @@ $("#header").append(HTMLskillsStart);
 for (var i = 0; i < bio.skills.length; i++) {
     var formattedSkills = HTMLskills.replace("%data%",bio.skills[i]);
     $("#skills").append(formattedSkills);
-}
+};
+
+var work = {};
+
+work.employer = "lorem ipsum";
+work.title = "dolor sit amet";
+work.years = "November 1994-Future";
+work.location = "Mumbai, India";
+work.description = "Integer gravida lacus nec arcu vehicula, ac commodo est ornare.";
+
+var formattedEmployer = HTMLworkEmployer.replace("%data%",work.employer);
+var formattedTitle = HTMLworkTitle.replace ("%data%",work.title);
+var formattedDates = HTMLworkDates.replace ("%data%",work.years);
+var formattedLocation = HTMLworkLocation.replace("%data%",work.location);
+var formattedDescription = HTMLworkDescription.replace("%data%",work.description);
+
+$("#workExperience").append(HTMLworkStart);
+$(".work-entry:last").append(formattedEmployer + formattedTitle);
+$(".work-entry:last").append(formattedDates);
+$(".work-entry:last").append(formattedLocation);
+$(".work-entry:last").append(formattedDescription);
+
+
+
+
+
+
+
+
+
+
+
+
 
 
