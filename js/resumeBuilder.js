@@ -76,7 +76,7 @@ var education = {
         {
             name: "Mauris cursus ullamcorper",
             degree: "BE",
-            years: "June 2012-may 2016",
+            years: "June 2012-May 2016",
             city: "Mumbai, India",
             major: "Electrical"
         },
