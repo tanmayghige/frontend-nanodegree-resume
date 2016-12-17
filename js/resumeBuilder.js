@@ -91,7 +91,7 @@ var education = {
     onlineCourses :{
         title: "Front-End Nanodegree",
         school: "Udacity",
-        dates: 2016-17,
+        dates: "2016-17",
         url: "https://www.udacity.com/"
     }
 };
