@@ -88,12 +88,12 @@ var education = {
             major: "Science"
         }
     ],
-    onlineCourses :{
+    onlineCourses :[{
         title: "Front-End Nanodegree",
         school: "Udacity",
         dates: "2016-17",
         url: "https://www.udacity.com/"
-    }
+    }]
 };
 
 $("#education").append(HTMLschoolStart);
@@ -124,16 +124,16 @@ $(".education-entry:last").append(formattedschoolLocation);
 var formattedschoolMajor = HTMLschoolMajor.replace("%data%", education.schools[1].major);
 $(".education-entry:last").append(formattedschoolMajor);
 
-var formattedonlineTitle = HTMLonlineTitle.replace("%data%",education.onlineCourses.title);
+var formattedonlineTitle = HTMLonlineTitle.replace("%data%",education.onlineCourses[0].title);
 $(".education-entry:last").append(formattedonlineTitle);
 
-var formattedonlineSchool = HTMLonlineSchool.replace("%data%",education.onlineCourses.school);
+var formattedonlineSchool = HTMLonlineSchool.replace("%data%",education.onlineCourses[0].school);
 $(".education-entry:last").append(formattedonlineSchool);
 
-var formattedonlineDates = HTMLonlineDates.replace("%data%",education.onlineCourses.dates);
+var formattedonlineDates = HTMLonlineDates.replace("%data%",education.onlineCourses[0].dates);
 $(".education-entry:last").append(formattedonlineDates);
 
-var formattedonlineURL = HTMLonlineURL.replace("%data%",education.onlineCourses.url);
+var formattedonlineURL = HTMLonlineURL.replace("%data%",education.onlineCourses[0].url);
 $(".education-entry:last").append(formattedonlineURL);
 
 
