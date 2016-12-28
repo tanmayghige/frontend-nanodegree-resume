@@ -20,6 +20,9 @@ var bio = {
 };
 
 
+
+
+
 var formattedRole = HTMLheaderRole.replace("%data%",bio.role);
 $("#header").prepend(formattedRole);
 
@@ -44,12 +47,14 @@ $("#header").append(formattedPic);
 var formattedMsg = HTMLwelcomeMsg.replace("%data%",bio.welcomeMessage);
 $("#header").append(formattedMsg);
 
-$("#header").append(HTMLskillsStart);
-
-for (var i = 0; i < bio.skills.length; i++) {
+if (bio.skills.length > 0) {
+    $("#header").append(HTMLskillsStart);
+    for (var i = 0; i < bio.skills.length; i++) {
     var formattedSkills = HTMLskills.replace("%data%",bio.skills[i]);
     $("#skills").append(formattedSkills);
+    };
 };
+
 
 var work = {};
 
